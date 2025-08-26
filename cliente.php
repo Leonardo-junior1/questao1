@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 1</title>
+   <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <h2> questao 1 - cliente vip</h2>
+    <form method="post">
+        nome: <input type="text" name="nome">
+        valor da compra: <input type="number" step="0.01" name="valor">
+        tipo de cliente (vip ou comum): <input type="text" name="tipo">
+        <input type="submit" value="calcular">
+    </form>
+    <?php 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nome = $_POST["nome"];
+        echo "Olá, $nome!";
+
+}
+
+    ?>
+</body>
+</html>
